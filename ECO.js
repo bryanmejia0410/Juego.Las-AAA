@@ -57,7 +57,7 @@ function GameOver (){
 } else {
      return false; }
 
-
+}
 function updateScore() {
     document.getElementById('score').textContent = `Puntuación: ${score}`;
 }
