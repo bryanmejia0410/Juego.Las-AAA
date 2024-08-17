@@ -52,12 +52,15 @@ function isCorrectBin(item, bin) {
 }
 
 function GameOver (){
- if (isCorrectBin){
-     return alert("¡Felicidades Haz Completado El Juego Correctamente!")
-} else {
-     return false; }
-
-}
+    if (score == 600){
+        return alert("¡Felicidades Haz Completado El Juego Correctamente!")
+    } 
+}     
 function updateScore() {
     document.getElementById('score').textContent = `Puntuación: ${score}`;
+    if (score == 600){
+     alert("¡Felicidades Haz Completado El Juego Correctamente!")
+     window.location.reload()
+    }
 }
+GameOver()
