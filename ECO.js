@@ -24,7 +24,7 @@ function dropItem(event) {
 
     if (isCorrectBin(item, bin)) {
         bin.appendChild(item);
-        score += 10;
+        score += 100;
         updateScore();
     } else {
         alert('¡Clasificación incorrecta!');
@@ -50,6 +50,13 @@ function isCorrectBin(item, bin) {
     }
     return false;
 }
+
+function GameOver (){
+ if (isCorrectBin){
+     return alert("¡Felicidades Haz Completado El Juego Correctamente!")
+} else {
+     return false; }
+
 
 function updateScore() {
     document.getElementById('score').textContent = `Puntuación: ${score}`;
